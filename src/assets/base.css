@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.centralizando {
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.infos {
+  display: flex;
+  width: 58%;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: rgb(189, 189, 189);
+}
+
+body{
+  background-color: black;
+}
+
+.cabecalho {
+  display: flex;
+  background-color: #032541;
+  height: 60px;
+  font-size: 20px;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.cabecalho span {
+  margin-right: 20px;
+  margin-left: 50px;
+}
+
+.cabecalho button {
+  background-color: #062e4e;
+  height: 50px;
+  width: 150px;
+  border-radius: 5px;
+  font-size: x-large;
+  border: 2px solid rgba(0, 0, 0, 0);
+}
+
+.cabecalho button:hover {
+  border: 2px rgb(189, 189, 189) solid;
+  color: rgb(189, 189, 189);
+}
+
+.select-cabecalho{
+  border: 0px;
+  color: white;
+  background-color: #032541;
+  width: 160px;
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+
+.films img {
+  width: 200px;
+  margin: 17px;
+}
+
+.films :hover {
+  width: 210px;
+  margin: 1px;
+  border: #07508C 3px solid;
+}
+
+.films a:hover{
+  border: black 2px solid;
+}
+
+p {
+  color:  white;
+  margin-top: 80px;
+  font-size: xx-large;
+  margin-left: 420px;
+}
+
+footer { 
+  background-color: #032541;
+  height: 80px;
+  margin-top: 60px;
+}
+
+footer p {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+  padding-top: 20px;
+}
+
+.main {
+  margin-top: 150px;
+}
+
+.main p {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+  font-size: 70px;
+}
+
+.descMovi {
+  background-color: rgb(15, 15, 15);
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 100px;
+  margin: 300px;
+  margin-top: 1px;
+  font-size: 30px;
+}
+
+.info-movi {
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+  margin-left: 70px;
+}
+
+.poster-filme-pag{
+  width: 350px;
+}
+
+.titulo {
+  font-size: 40px;
+  border-bottom: #032541 solid 3px;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.pesquisa {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.pesquisa input {
+  color: white;
+  background-color: black;
+  border: 2px solid gray;
+  width: 800px;
+  height: 61px;
+  font-size: 30px;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.pesquisa button {
+  border: 2px solid gray;
+  background-color: black;
+  color: white;
+  font-size: 30px;
+  padding: 21px;
+}
+
+.pesquisa button:hover{
+  border: 2px solid white;
+  background-color: white;
+  color: black;
+}
+
+.caixona {
+ display: flex;
+ flex-direction: row;
+}
+
+.caixa {
+  align-items: center;
+  background-color: rgba(128, 128, 128, 0.151);
+  width: 95%;
+  margin: 2%;
+}
+
+.titulo-caixa {
+  border-bottom: #032541 solid 5px;
+  width: 95%;
+  margin: 2%;
+}
+
+.titulo-caixa p{
+  margin: 0%;
+  text-align: center;
+}
+
+.resposta {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(128, 128, 128, 0.151);
+  width: 95%;
+  margin: 2%;
+}
+
+.conteudoR {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.conteudoRF {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+
+.forms-login{
+  background-color: #44515c;
+  display: flex;
+  width: 22%;
+  border-radius: 15px;
+  height: 40vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.forms-login label {
+  padding-bottom: 5px;
+}
+
+.btn-entrar{
+  padding: 12px 36px;
+  background-color: white;
+  margin: 20px;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0);
+}
+
+.btn-entrar:hover {
+  border: 2px rgb(189, 189, 189) solid;
+  color: rgb(121, 121, 121);
+}
+
+.titulo-login {
+  padding: 10px;
+}
+
+.cadastro {
+  display: flex;
+  align-items: center;
+}
+
+.cadastro a {
+  color: black;
+  text-decoration: underline;
+}
+
+.cadastro a:hover {
+  color: gray;
+}
+
+.cadastro p{
+  font-size: 20px;
+}
+
+.input-login{
+  border-radius: 8px;
+  border: none;
+  height: 27px;
+  padding-left: 10px;
+  margin-bottom: 5px;
+}
+
+.conteudo-login{
+  padding-top: 60px;
+  padding-bottom: 180px;
+}
+
+.acao {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.filme-curtir {
+  color: white;
+  background-color: #062e4e;
+  height: 50px;
+  width: 150px;
+  border-radius: 5px;
+  font-size: x-large;
+  border: 2px solid rgba(0, 0, 0, 0);
+  margin-right: 50px;
+}
+
+.filmes-tarde {
+  color: white;
+  background-color: #062e4e;
+  height: 50px;
+  width: 300px;
+  border-radius: 5px;
+  font-size: x-large;
+  border: 2px solid rgba(0, 0, 0, 0);
+}
+
+.filme-curtir:hover, .filmes-tarde:hover {
+  border: 2px rgb(189, 189, 189) solid;
+  color: rgb(189, 189, 189);
+}
+
+.não-sei {
+  background-color: gray;
+}
+
+.perfil {
+  background-color: rgba(128, 128, 128, 0.151);
+  width: 95%;
+  margin: 2%;
+  height: 370px;
+}
+
+.btn-logout {
+  color: white;
+  background-color: #062e4e;
+  height: 50px;
+  width: 150px;
+  border-radius: 5px;
+  font-size: x-large;
+  border: 2px solid rgba(0, 0, 0, 0);
+}
+
+.btn-logout:hover {
+  border: 2px rgb(189, 189, 189) solid;
+  color: rgb(189, 189, 189);
+}
+
+.info-perfil {
+  padding-top: 35px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  margin: 2%;
+}
+
+.info-perfil h1{
+  padding: 25px;
+}
+
+.caixa-btn {
+  display: flex;
+  justify-content: space-around;
+
+}
