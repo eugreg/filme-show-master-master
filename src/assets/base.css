@@ -366,3 +366,7 @@ footer p {
   width: 300px;
   
 }
+.poster-profile-header{
+  border-radius: 80%;
+  width: 40px;
+}
