@@ -9,12 +9,20 @@ export default {
     return {
       user: "",
       favorito: [],
+      tmdb:[],
+      
     };
   },
 
   computed: {
     ...mapStores(useAuthStore),
-    ...mapState(useAuthStore, ["userMovies", "userWatch", "userToken"]),
+    ...mapState(useAuthStore, [
+      "userMovies",
+      "userWatch",
+      "userToken",
+      "userData",
+      
+    ]),
   },
   async created() {
     await this.getfilme();
@@ -31,6 +39,7 @@ export default {
       "getfilme",
       "logout",
       "getWatch",
+      
     ]),
 
     async deslogar() {
@@ -45,6 +54,9 @@ export default {
     getPosterUrl(posterPath) {
       return `https://image.tmdb.org/t/p/w500${posterPath}`;
     },
+    getProfileUrl(avatar_path) {
+      return `https://image.tmdb.org/t/p/w500${avatar_path}`;
+    },
   },
 };
 </script>
@@ -53,10 +65,16 @@ export default {
   <div class="perfil">
     <div class="info-perfil">
       <div>
-        <img src="../assets/img/perfil.png" alt="" />
+        <img
+          class="poster-profile-pag"
+          :src="getProfileUrl(userData.avatar.tmdb.avatar_path)"
+          alt="linda imagem do avatar"
+    
+        /> 
       </div>
       <div>
-        <h1>Tentei fazer aparecer o username mas não consegui.</h1>
+        <h1>{{ userData.username }}</h1>
+ 
       </div>
     </div>
     <div class="caixa-btn">

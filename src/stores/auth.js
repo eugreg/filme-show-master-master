@@ -13,6 +13,7 @@ export const useAuthStore = defineStore("auth", () => {
   const userToken = useStorage("userToken", "");
   const sessionId = useStorage("sessionId", "");
   const userData = useStorage("userData", {});
+ 
   const userMovies = useStorage("userMovies", []);
   const userWatch = ref([]);
   const userFav = ref([]);
@@ -29,6 +30,7 @@ export const useAuthStore = defineStore("auth", () => {
     );
     sessionId.value = await loginapi.Session(userToken.value);
     userData.value = await loginapi.GetProfile(sessionId.value);
+   
     // router.push(this.goPagehome || "/filme");
     // userData.value = { ...user}
   }
@@ -67,6 +69,7 @@ export const useAuthStore = defineStore("auth", () => {
     getWatch,
     salvarWatch,
     logout,
+
     userWa,
     userWatch,
     globalToken,
