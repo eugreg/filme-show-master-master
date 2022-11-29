@@ -51,14 +51,14 @@ export default {
             <input class="input-login" v-model="password" type="password" />
             <button class="btn-entrar" type="submit">Entrar</button>
           </div>
-          <!-- <div class="cadastro">
-            <p>
+          <div class="cadastro">
+            
               Não possui um conta?
-              <a href="https://www.themoviedb.org/" target="_blank"
+              <a href="https://www.themoviedb.org/signup" target="_blank"
                 >Cadastre-se</a
-              >   NÃO SEI O PQ KRLS ESSA MERDA TA FICANDO TORTA, TALVEZ SEJA EU 
-            </p>
-          </div> -->
+              >   
+            
+          </div>
         </div>
 
         <div v-if="userToken.false">
