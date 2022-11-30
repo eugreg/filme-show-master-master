@@ -62,7 +62,7 @@ export default {
            <img
           class="poster-profile-header"
           :src="getProfileUrl(userData.avatar.tmdb.avatar_path)"
-          alt="linda imagem do avatar"
+        
     
         /> 
           </span></RouterLink

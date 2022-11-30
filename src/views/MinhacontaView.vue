@@ -68,7 +68,7 @@ export default {
         <img
           class="poster-profile-pag"
           :src="getProfileUrl(userData.avatar.tmdb.avatar_path)"
-          alt="linda imagem do avatar"
+          
     
         /> 
       </div>
