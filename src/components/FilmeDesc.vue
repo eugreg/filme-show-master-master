@@ -61,7 +61,7 @@ export default {
         alt="linda imagem do avatar"
       />
       <iframe
-        v-if="videos"
+        v-if="videos.length > 0"
         width="560"
         height="315"
         :src="getVideoUrl(videos[0].key)"

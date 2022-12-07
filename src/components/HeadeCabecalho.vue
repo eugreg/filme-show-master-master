@@ -56,7 +56,7 @@ export default {
           ><RouterLink to="/lancamento">Lançamentos</RouterLink></span
         >
       </div>
-      <div>
+      <div v-if="userData.avatar">
         <RouterLink to="/minha-conta"
           ><span class="cabecalho-span">
            <img
