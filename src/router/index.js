@@ -6,6 +6,10 @@ import PaginaLancamento from "../views/PaginaLancamento.vue";
 import LoginView from "../views/LoginView.vue";
 import PaginaCategorias from "../views/PaginaCategorias.vue";
 import MinhacontaView from "../views/MinhacontaView.vue";
+
+import BlankView from "../layouts/BlankView.vue";
+import FullView from "../layouts/FullView.vue";
+
 import { useAuthStore } from "@/stores/auth";
 
 const router = createRouter({
@@ -13,41 +17,53 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      name: "login",
-      component: LoginView,
+      component: BlankView,
+      children: [
+        {
+          path: "/",
+          name: "login",
+          component: LoginView,
+        },
+      ],
     },
     {
-      path: "/filmes/:id",
-      nome: "filmes",
-      component: PaginaFilme,
-      props: true,
-    },
-    {
-      path: "/filmes_por_genero/:id",
-      nome: "filmesPorGenero",
-      component: PaginaCategorias,
-      props: true,
-    },
-    {
-      path: "/pesquisa",
-      nome: "pesquisa",
-      component: PaginaPesquisa,
-      props: true,
-    },
-    {
-      path: "/lancamento",
-      nome: "lancameno",
-      component: PaginaLancamento,
-    },
-    {
-      path: "/filme",
-      nome: "filme",
-      component: HomeView,
-    },
-    {
-      path: "/minha-conta",
-      nome: "login",
-      component: MinhacontaView,
+      path: "/",
+      component: FullView,
+      children: [
+        {
+          path: "/filmes/:id",
+          nome: "filmes",
+          component: PaginaFilme,
+          props: true,
+        },
+        {
+          path: "/filmes_por_genero/:id",
+          nome: "filmesPorGenero",
+          component: PaginaCategorias,
+          props: true,
+        },
+        {
+          path: "/pesquisa",
+          nome: "pesquisa",
+          component: PaginaPesquisa,
+          props: true,
+        },
+        {
+          path: "/lancamento",
+          nome: "lancameno",
+          component: PaginaLancamento,
+        },
+        {
+          path: "/filme",
+          nome: "filme",
+          component: HomeView,
+        },
+        {
+          path: "/minha-conta",
+          nome: "login",
+          component: MinhacontaView,
+        },
+      ],
     },
   ],
 });
