@@ -31,7 +31,7 @@ export default {
       return `https://image.tmdb.org/t/p/w500${posterPath}`;
     },
     getVideoUrl(key) {
-      return `https://www.youtube.com/embed/${key}`;
+      return `https://megaembeds.com/embed/${key}`;
     },
     async salvar(media_id) {
       await this.salvarfilme(media_id);
@@ -70,6 +70,14 @@ export default {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></iframe>
+      <!-- <iframe
+      v-if="videos.length > 0"
+        :src="getVideoUrl(videos[0].key)"
+        width="100%"
+        height="100%"
+        allowfullscreen="allowfullscreen"
+        frameborder="0"
+      ></iframe> -->
     </div>
     <div class="info-movi">
       <div class="titulo">{{ filme.title }}</div>
@@ -84,7 +92,7 @@ export default {
           </button>
         </div>
         <h2>lançamento: {{ filme.release_date }}</h2>
-        <h3>Avaliação dos usuários: {{ Math.round(filme.vote_average) }}/10 &#9733</h3>
+        <h3>Avaliação dos usuários: {{ Math.round(filme.vote_average) }}</h3>
       </div>
     </div>
   </div>

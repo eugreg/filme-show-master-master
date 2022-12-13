@@ -12,9 +12,14 @@ export default class FilmeApi {
     );
     return response.data.results;
   }
+  // async BuscarVideos (id){
+  //   const response = await axios.get(
+  //     `https://api.themoviedb.org/3/movie/${id}/videos?api_key=a37701b7a0845f3785cd83eb23add599&language=pt-BR`);
+  //     return response.data.results;
+  // }
   async BuscarVideos (id){
     const response = await axios.get(
-      `https://api.themoviedb.org/3/movie/${id}/videos?api_key=a37701b7a0845f3785cd83eb23add599&language=pt-BR`);
-      return response.data.results;
-  }
+      `https://megaembeds.com/embed/movie?tmdb=${id}`);
+      return response.endpoints;
+ }
 }
