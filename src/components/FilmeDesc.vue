@@ -30,8 +30,8 @@ export default {
     getPosterUrl(posterPath) {
       return `https://image.tmdb.org/t/p/w500${posterPath}`;
     },
-    getVideoUrl(key) {
-      return `https://www.youtube.com/embed/${key}`;
+    getVideoUrl(imdb_id) {
+      return ` https://embedder.net/e/${imdb_id}`;
     },
     async salvar(media_id) {
       await this.salvarfilme(media_id);
@@ -61,10 +61,10 @@ export default {
         alt="linda imagem do avatar"
       />
       <iframe
-        v-if="videos.length > 0"
+        v-if="filme"
         width="560"
         height="315"
-        :src="getVideoUrl(videos[0].key)"
+        :src="getVideoUrl(filme.imdb_id)"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -84,7 +84,7 @@ export default {
           </button>
         </div>
         <h2>lançamento: {{ filme.release_date }}</h2>
-        <h3>Avaliação dos usuários: {{ Math.round(filme.vote_average) }}/10 &#9733</h3>
+        <h3>Avaliação dos usuários: {{ Math.round(filme.vote_average) }}</h3>
       </div>
     </div>
   </div>
