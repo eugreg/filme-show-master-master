@@ -31,7 +31,7 @@ export default {
       return `https://image.tmdb.org/t/p/w500${posterPath}`;
     },
     getVideoUrl(imdb_id) {
-      return ` https://embedder.net/e/${imdb_id}`;
+      return `  https://embed.warezcdn.com/filme/${imdb_id}`;
     },
     async salvar(media_id) {
       await this.salvarfilme(media_id);
@@ -60,7 +60,9 @@ export default {
         :src="getPosterUrl(filme.poster_path)"
         alt="linda imagem do avatar"
       />
-      <iframe
+      <div id="embedWarezCdn">
+
+        <iframe
         v-if="filme"
         width="560"
         height="315"
@@ -69,7 +71,8 @@ export default {
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
-      ></iframe>
+        ></iframe>
+      </div>
     </div>
     <div class="info-movi">
       <div class="titulo">{{ filme.title }}</div>
