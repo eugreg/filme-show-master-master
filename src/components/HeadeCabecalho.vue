@@ -55,6 +55,7 @@ export default {
         <span class="cabecalho-span"
           ><RouterLink to="/lancamento">Lançamentos</RouterLink></span
         >
+        <span class="cabecalho-span" ><RouterLink to="/series">Series</RouterLink></span>
       </div>
       <div v-if="userData.avatar">
         <RouterLink to="/minha-conta"
